@@ -10,7 +10,7 @@ class AppTheme {
 
   static ThemeData lightTheme =ThemeData(
     primaryColor: lightprimary,
-    appBarTheme: AppBarTheme(
+    appBarTheme: const AppBarTheme(
       backgroundColor: Colors.transparent,
       centerTitle: true,
       titleTextStyle: TextStyle(
@@ -20,12 +20,24 @@ class AppTheme {
       ),
     ),
     scaffoldBackgroundColor: Colors.transparent,    
-    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
        type: BottomNavigationBarType.fixed,
        backgroundColor: lightprimary,
        selectedItemColor: black,
        unselectedItemColor: white,
     ),
+    textTheme: const TextTheme(
+      headlineSmall: TextStyle(
+        fontSize: 25,
+        fontWeight: FontWeight.w400,
+        color: Colors.black,
+      ),
+      titleLarge: TextStyle(
+        fontSize: 20,
+        fontWeight: FontWeight.w400,
+        color: Colors.black,
+      )
+    )
   );
   static ThemeData darkTheme =ThemeData(
     primaryColor: darkprimary,

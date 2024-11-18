@@ -8,6 +8,8 @@ import 'package:islami/tabs/settings/settings_tab.dart';
 class HomeScreen extends StatefulWidget {
   static const String routeName = '/home';
 
+  const HomeScreen({super.key});
+
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
@@ -16,15 +18,15 @@ class _HomeScreenState extends State<HomeScreen> {
   int currentIndex =0;
   List<Widget> tabs = [
     QuranTab(),
-    HadethTab(),
-    SebhaTab(),
-    RadioTab(),
-    SettingsTab(),
+    const HadethTab(),
+    const SebhaTab(),
+    const RadioTab(),
+    const SettingsTab(),
   ];
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         image: DecorationImage(
           image: 
           AssetImage('assets/images/default_bg.png'),
@@ -33,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
       child: Scaffold(
         appBar: AppBar(
-          title: Text(
+          title: const Text(
             'إسلامي'
             ),),
         body: tabs[currentIndex],
@@ -43,32 +45,32 @@ class _HomeScreenState extends State<HomeScreen> {
             currentIndex = index ;
             setState(() {});
           },
-          items: [
+          items: const [
                 BottomNavigationBarItem(
               icon: 
               ImageIcon(
-                AssetImage('assets/images/2.0x/icon_quran@2x.png'),
+                AssetImage('assets/images/icon_quran.png'),
                 ),
                 label: 'Quran',
                 ),
                 BottomNavigationBarItem(
               icon: 
               ImageIcon(
-                AssetImage('assets/images/2.0x/icon_hadeth@2x.png'),
+                AssetImage('assets/images/icon_hadeth.png'),
                 ),
                 label: 'Hadeth',
                 ),
                 BottomNavigationBarItem(
               icon: 
               ImageIcon(
-                AssetImage('assets/images/2.0x/body_sebha_dark@2x.png'),
+                AssetImage('assets/images/icon_sebha.png'),
                 ),
                 label: 'Sebha',
                 ),
                  BottomNavigationBarItem(
               icon: 
               ImageIcon(
-                AssetImage('assets/images/2.0x/icon_radio@2x.png'),
+                AssetImage('assets/images/icon_radio.png'),
                 ),
                 label: 'Radio'
                 ),
