@@ -9,14 +9,15 @@ class AppTheme {
 
 
   static ThemeData lightTheme =ThemeData(
-    primaryColor: lightprimary,
+    primaryColor:lightprimary,
     appBarTheme: const AppBarTheme(
       backgroundColor: Colors.transparent,
+      foregroundColor: black,
       centerTitle: true,
       titleTextStyle: TextStyle(
         fontSize: 30,
         fontWeight: FontWeight.bold,
-        color: Colors.black,
+        color:white,
       ),
     ),
     scaffoldBackgroundColor: Colors.transparent,    
@@ -30,17 +31,49 @@ class AppTheme {
       headlineSmall: TextStyle(
         fontSize: 25,
         fontWeight: FontWeight.w400,
-        color: Colors.black,
+        color: black,
       ),
       titleLarge: TextStyle(
         fontSize: 20,
         fontWeight: FontWeight.w400,
-        color: Colors.black,
+        color: black,
       )
     )
   );
+
+
+
   static ThemeData darkTheme =ThemeData(
-    primaryColor: darkprimary,
+     primaryColor: darkprimary,
+    appBarTheme: const AppBarTheme(
+      backgroundColor: Colors.transparent,
+      foregroundColor: white,
+      centerTitle: true,
+      titleTextStyle: TextStyle(
+        fontSize: 30,
+        fontWeight: FontWeight.bold,
+        color: white,
+      ),
+    ),
+    scaffoldBackgroundColor: Colors.transparent,    
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+       type: BottomNavigationBarType.fixed,
+       backgroundColor: darkprimary,
+       selectedItemColor: gold,
+       unselectedItemColor: white,
+    ),
+    textTheme: const TextTheme(
+      headlineSmall: TextStyle(
+        fontSize: 25,
+        fontWeight: FontWeight.w400,
+        color: white,
+      ),
+      titleLarge: TextStyle(
+        fontSize: 20,
+        fontWeight: FontWeight.w400,
+        color: gold,
+      )
+    )
   );
 
 

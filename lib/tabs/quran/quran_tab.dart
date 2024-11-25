@@ -51,7 +51,7 @@ class QuranTab extends StatelessWidget {
               Container(
                 width: 1,
                 height: 30,
-                color: Colors.grey,
+                // color: Colors.grey,
               ),
               Expanded(
                 flex: 3,
