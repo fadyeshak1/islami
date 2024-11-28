@@ -5,6 +5,8 @@ import 'package:islami/tabs/hadeth/hadeth_content_screen.dart';
 import 'package:islami/tabs/quran/sura_content_screen.dart';
 import 'package:islami/tabs/settings/settings_provider.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
   runApp(
@@ -33,6 +35,21 @@ class MyApp extends StatelessWidget {
       theme:AppTheme.lightTheme ,
       darkTheme: AppTheme.darkTheme,
       themeMode: settingsProvider.themeMode,
+      localizationsDelegates: [
+    GlobalMaterialLocalizations.delegate,
+    GlobalWidgetsLocalizations.delegate,
+    GlobalCupertinoLocalizations.delegate,
+  ],
+  supportedLocales: [
+    Locale('en'), // English
+    Locale('es'), // Spanish
+  ],
     );
   }
+  Future<void> saveData(String key, String value) async {
+  final SharedPreferences prefs = await SharedPreferences.getInstance();
+  await prefs.setString(key, value);
 }
+}
+
+
