@@ -15,11 +15,19 @@ class SettingsProvider with ChangeNotifier {
   String get backgroundImageName =>
       _themeMode == ThemeMode.light ? 'default_bg' : 'dark_bg';
 
+      
+  String get sebhaImage=>
+      _themeMode == ThemeMode.light ? 'body_sebha_logo' : 'body_sebha_dark';
+
+      String get headImage =>
+      _themeMode == ThemeMode.light ? 'head_sebha_logo' : 'head_sebha_dark';
+
   void changeTheme(ThemeMode selectedTheme) async {
     _themeMode = selectedTheme;
     notifyListeners();
     await _saveThemeToPreferences(selectedTheme);
   }
+
 
   void changeLanguage(String selectedLanguage) async {
     _languageCode = selectedLanguage;

@@ -28,7 +28,9 @@ class HadethContentScreen extends StatelessWidget {
           ),
           ),
       child:Scaffold(appBar: AppBar(
-        title:  Text(hadeth.title), 
+        title:  Text(hadeth.title,
+        style:  Theme.of(context).textTheme.headlineSmall,
+        ), 
       ),
       body: Container(
         padding:EdgeInsets.all(24),
@@ -37,7 +39,6 @@ class HadethContentScreen extends StatelessWidget {
           horizontal: 30 ,
         ), 
         decoration: BoxDecoration(
-          color: AppTheme.white ,
           borderRadius: BorderRadius.circular(25),
         ),
         child: ListView.builder(

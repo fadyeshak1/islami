@@ -27,6 +27,12 @@ class AppTheme {
        selectedItemColor: black,
        unselectedItemColor: white,
     ),
+
+    colorScheme: const ColorScheme.light(
+      primary: white,
+    background:lightprimary , 
+  ),
+
     textTheme: const TextTheme(
       headlineSmall: TextStyle(
         fontSize: 25,
@@ -62,6 +68,14 @@ class AppTheme {
        selectedItemColor: gold,
        unselectedItemColor: white,
     ),
+    
+
+    colorScheme: const ColorScheme.dark(
+      primary: darkprimary,
+    background:darkprimary ,
+    onBackground: gold, 
+  ),
+
     textTheme: const TextTheme(
       headlineSmall: TextStyle(
         fontSize: 25,

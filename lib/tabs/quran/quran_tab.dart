@@ -33,7 +33,7 @@ class QuranTab extends StatelessWidget {
           height: MediaQuery.sizeOf(context).height * 0.25,
         ),
         Container(
-          color: Colors.grey.shade200,
+          color: Theme.of(context).primaryColor,
           padding: const EdgeInsets.symmetric(vertical: 8),
           child: Row(
             children: [
@@ -51,7 +51,7 @@ class QuranTab extends StatelessWidget {
               Container(
                 width: 1,
                 height: 30,
-                // color: Colors.grey,
+                
               ),
               Expanded(
                 flex: 3,
@@ -85,7 +85,7 @@ class QuranTab extends StatelessWidget {
                     child: Text(
                       '${ayatCounts[index]}',
                       textAlign: TextAlign.center,
-                      style: Theme.of(context).textTheme.bodyMedium,
+                      style: Theme.of(context).textTheme.headlineSmall,
                     ),
                   ),
                   Container(
@@ -98,7 +98,7 @@ class QuranTab extends StatelessWidget {
                     child: Text(
                       surNames[index],
                       textAlign: TextAlign.center,
-                      style: Theme.of(context).textTheme.bodyMedium,
+                      style: Theme.of(context).textTheme.headlineSmall,
                     ),
                   ),
                 ],

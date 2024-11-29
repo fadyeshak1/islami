@@ -37,7 +37,10 @@ class _SuraContentScreenState extends State<SuraContentScreen> {
           ),
           ),
       child:Scaffold(appBar: AppBar(
-        title:  Text(args.surName), 
+        title:  Text(args.surName,
+        style: Theme.of(context).textTheme.headlineSmall,
+        ), 
+        
       ),
       body: Container(
         padding:EdgeInsets.all(24),
@@ -46,7 +49,6 @@ class _SuraContentScreenState extends State<SuraContentScreen> {
           horizontal: 30 ,
         ), 
         decoration: BoxDecoration(
-          color: AppTheme.white ,
           borderRadius: BorderRadius.circular(25),
         ),
         child: ayat.isEmpty
